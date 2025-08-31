@@ -1,12 +1,478 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body>
-    <h1 class="text-[red] text-[50px] mt-[101px] bg-[orange]">salom</h1>
-</body>
+<html lang="en" class="bg-[#242424] text-white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NFT Marketplace</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.3/dist/tailwind.min.css"
+      rel="stylesheet"/>
+  </head>
+  <body class="bg-[#242424] min-h-screen font-sans">
+    <!-- Navbar start -->
+    <nav
+      class="flex items-center justify-between px-4 sm:px-8 py-6 max-w-7xl mx-auto">
+      <div class="flex items-center gap-2">
+        <svg
+          width="28"
+          height="28"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <rect width="28" height="28" rx="6" fill="#A259FF" />
+          <path
+            d="M6 18h16M8 14h12M10 10h8"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linecap="round"/>
+        </svg>
+        <span class="ml-2 font-bold text-lg tracking-wide"
+          >NFT <span class="font-normal">Marketplace</span></span>
+      </div>
+      <div class="hidden md:flex gap-8 items-center">
+        <a href="#" class="hover:text-violet-400">Marketplace</a>
+        <a href="#" class="hover:text-violet-400">Rankings</a>
+        <a href="#" class="hover:text-violet-400">Connect a wallet</a>
+        <button
+          class="flex items-center gap-2 px-6 py-2 rounded-xl bg-[#A259FF] text-white font-semibold hover:bg-violet-600 transition">
+          <svg
+            width="20"
+            height="20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15 10a5 5 0 11-10 0 5 5 0 0110 0z"
+              stroke="#fff"
+              stroke-width="2"/>
+            <path
+              d="M19 19l-3.867-3.867"
+              stroke="#fff"
+              stroke-width="2"
+              stroke-linecap="round"/>
+          </svg>
+          Sign Up
+        </button>
+      </div>
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button>
+          <svg width="28" height="28" fill="none" viewBox="0 0 28 28">
+            <rect width="28" height="28" rx="6" fill="#A259FF" />
+            <path
+              d="M8 14h12M8 10h12M8 18h12"
+              stroke="#fff"
+              stroke-width="2"
+              stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-8">
+      <!-- Hero Section -->
+      <section class="flex flex-col lg:flex-row gap-8 mt-10">
+        <div class="flex-1 max-w-xl">
+          <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+            Discover<br />Digital Art &<br />Collect NFTs
+          </h1>
+          <p class="text-lg text-gray-300 mb-8">
+            NFT Marketplace UI Created With Anima For Figma. Collect, Buy And
+            Sell Art From More Than 20k NFT Artists.
+          </p>
+          <button
+            class="flex items-center gap-2 px-8 py-3 rounded-xl bg-[#A259FF] text-white font-bold text-lg shadow-lg hover:bg-violet-600 transition mb-12">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3 10h14M10 3l7 7-7 7"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"/>
+            </svg>
+            Get Started
+          </button>
+          <div class="flex gap-8 text-center">
+            <div>
+              <div class="text-2xl font-bold">240k+</div>
+              <div class="text-gray-400 text-base">Total Sale</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold">100k+</div>
+              <div class="text-gray-400 text-base">Auctions</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold">240k+</div>
+              <div class="text-gray-400 text-base">Artists</div>
+            </div>
+          </div>
+        </div>
+        <!-- Right strar -->
+        <div class="flex-1 flex justify-center items-start">
+          <div
+            class="bg-[#343444] rounded-2xl overflow-hidden shadow-lg w-full max-w-xs">
+            <img
+              src="./img/Image Placeholder.png"
+              alt="Space Walking"
+              class="w-full h-60 object-cover"/>
+            <div class="p-4">
+              <div class="text-lg font-bold mb-1">Space Walking</div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="./img/Avatar (7).svg"
+                  class="w-7 h-7 rounded-full border-2 border-[#A259FF]"
+                  alt="author"/>
+                <span class="text-gray-300 text-base">Animakid</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trending  -->
+      <section class="mt-16">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold">Trending Collection</h2>
+          <button
+            class="px-4 py-2 rounded-lg bg-[#A259FF] text-white text-sm font-semibold hover:bg-violet-600 transition">
+            See All
+          </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div class="bg-[#343444] rounded-2xl overflow-hidden">
+            <img
+              src="./img/Primary Photo Placeholder.png"
+              alt=""
+              class="w-full h-48 object-cover"/>
+            <div class="p-4">
+              <div class="text-lg font-bold mb-2">DSGN Animals</div>
+              <div class="flex gap-2">
+                <img
+                  src="./img/Secondary Photo Placeholder.svg"
+                  class="w-8 h-8 rounded-lg object-cover"/>
+                <img
+                  src="./img/Secondary Photo Placeholder (1).svg"
+                  class="w-8 h-8 rounded-lg object-cover"/>
+                <span
+                  class="bg-[#A259FF] text-xs px-2 py-1 rounded-lg flex items-center ml-2"
+                  >1025+</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-[#343444] rounded-2xl overflow-hidden">
+            <img
+              src="./img/Primary Photo Placeholder (1).png"
+              alt=""
+              class="w-full h-48 object-cover"/>
+            <div class="p-4">
+              <div class="text-lg font-bold mb-2">Magic Mushrooms</div>
+              <div class="flex gap-2">
+                <img
+                  src="./img/Primary Photo Placeholder.png"
+                  class="w-8 h-8 rounded-lg object-cover"/>
+                <img
+                  src="./img/Primary Photo Placeholder (1).png"
+                  class="w-8 h-8 rounded-lg object-cover"/>
+                <span
+                  class="bg-[#A259FF] text-xs px-2 py-1 rounded-lg flex items-center ml-2"
+                  >900+</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-[#343444] rounded-2xl overflow-hidden">
+            <img
+              src="./img/Primary Photo Placeholder (2).png"
+              alt=""
+              class="w-full h-48 object-cover"/>
+            <div class="p-4">
+              <div class="text-lg font-bold mb-2">Disco Machines</div>
+              <div class="flex gap-2">
+                <img
+                  src="./img/Secondary Photo Placeholder (2).svg"
+                  class="w-8 h-8 rounded-lg object-cover"/>
+                <img
+                  src="./img/Secondary Photo Placeholder (3).svg"
+                  class="w-8 h-8 rounded-lg object-cover"/>
+                <span
+                  class="bg-[#A259FF] text-xs px-2 py-1 rounded-lg flex items-center ml-2"
+                  >1500+</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Top start -->
+      <section class="mt-16">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold">Top Creators</h2>
+          <button
+            class="px-4 py-2 rounded-lg bg-[#A259FF] text-white text-sm font-semibold hover:bg-violet-600 transition">
+            View Rankings
+          </button>
+        </div>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+          <!-- Creator Cards -->
+          <div class="bg-[#343444] rounded-xl p-4 flex items-center gap-4">
+            <img
+              src="./img/Artist Avatar.svg"
+              class="w-10 h-10 rounded-full border-2 border-[#A259FF]"/>
+            <div>
+              <div class="font-semibold">Keepitreal</div>
+              <div class="text-xs text-gray-400">@keepitreal</div>
+            </div>
+          </div>
+          <div class="bg-[#343444] rounded-xl p-4 flex items-center gap-4">
+            <img
+              src="./img/Avatar.png"
+              class="w-10 h-10 rounded-full border-2 border-[#A259FF]"/>
+            <div>
+              <div class="font-semibold">DigiLab</div>
+              <div class="text-xs text-gray-400">@digilab</div>
+            </div>
+          </div>
+          <div class="bg-[#343444] rounded-xl p-4 flex items-center gap-4">
+            <img
+              src="./img/Artist Avatar (1).svg"
+              class="w-10 h-10 rounded-full border-2 border-[#A259FF]"/>
+            <div>
+              <div class="font-semibold">GravityOne</div>
+              <div class="text-xs text-gray-400">@gravityone</div>
+            </div>
+          </div>
+          <div class="bg-[#343444] rounded-xl p-4 flex items-center gap-4">
+            <img
+              src="./img/Avatar (8).svg"
+              class="w-10 h-10 rounded-full border-2 border-[#A259FF]"/>
+            <div>
+              <div class="font-semibold">Juanie</div>
+              <div class="text-xs text-gray-400">@juanie</div>
+            </div>
+          </div>
+          <div class="bg-[#343444] rounded-xl p-4 flex items-center gap-4">
+            <img
+              src="./img/Avatar (9).svg"
+              class="w-10 h-10 rounded-full border-2 border-[#A259FF]"/>
+            <div>
+              <div class="font-semibold">BlueWhale</div>
+              <div class="text-xs text-gray-400">@bluewhale</div>
+            </div>
+          </div>
+          <div class="bg-[#343444] rounded-xl p-4 flex items-center gap-4">
+            <img
+              src="img/Artist Avatar (2).svg"
+              class="w-10 h-10 rounded-full border-2 border-[#A259FF]"/>
+            <div>
+              <div class="font-semibold">Mr Fox</div>
+              <div class="text-xs text-gray-400">@mrfox</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Browse Categories -->
+      <section class="mt-16">
+        <h2 class="text-2xl font-bold mb-6">Browse Categories</h2>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div class="bg-[#343444] rounded-xl p-6 flex flex-col items-center">
+            <img
+              src="./img/Photo & Icon.png"
+              class="mb-2"/>
+            <span class="font-semibold">Art</span>
+          </div>
+          <div class="bg-[#343444] rounded-xl p-6 flex flex-col items-center">
+            <img
+              src="./img/Photo & Icon (1).png"
+              class="mb-2"/>
+            <span class="font-semibold">Games</span>
+          </div>
+          <div class="bg-[#343444] rounded-xl p-6 flex flex-col items-center">
+            <img
+              src="./img/Photo & Icon (2).png"
+              class="mb-2"/>
+            <span class="font-semibold">Music</span>
+          </div>
+          <div class="bg-[#343444] rounded-xl p-6 flex flex-col items-center">
+            <img
+              src="./img/Photo & Icon (3).png"
+              class="mb-2"/>
+            <span class="font-semibold">Video</span>
+          </div>
+          <div class="bg-[#343444] rounded-xl p-6 flex flex-col items-center">
+            <img
+              src="./img/Photo & Icon (4).png"
+              class="mb-2"/>
+            <span class="font-semibold">Virtual Worlds</span>
+          </div>
+          <div class="bg-[#343444] rounded-xl p-6 flex flex-col items-center">
+            <img
+              src="./img/Photo & Icon (5).png"
+              class="mb-2"/>
+            <span class="font-semibold">Photography</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Discover start -->
+      <section class="mt-16">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold">Discover More NFTs</h2>
+          <button
+            class="px-4 py-2 rounded-lg bg-[#A259FF] text-white text-sm font-semibold hover:bg-violet-600 transition">
+            See All
+          </button>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="bg-[#343444] rounded-2xl overflow-hidden">
+            <img
+              src="./img/Image (1).png"
+              class="w-full h-48 object-cover"/>
+            <div class="p-4">
+              <div class="text-lg font-bold mb-2">Distant Galaxy</div>
+              <div class="flex items-center gap-2 mb-2">
+                <img
+                  src="./img/Avatar (10).svg"
+                  class="w-7 h-7 rounded-full border-2 border-[#A259FF]"/>
+                <span class="text-gray-300">MoonDancer</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#343444] rounded-2xl overflow-hidden">
+            <img
+              src="./img/Image (2).png"
+              class="w-full h-48 object-cover"/>
+            <div class="p-4">
+              <div class="text-lg font-bold mb-2">Life On Edena</div>
+              <div class="flex items-center gap-2 mb-2">
+                <img
+                  src="./img/Avatar (8).svg"
+                  class="w-7 h-7 rounded-full border-2 border-[#A259FF]"/>
+                <span class="text-gray-300">NebulaKid</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#343444] rounded-2xl overflow-hidden">
+            <img
+              src="./img/Image (9).svg"
+              class="w-full h-48 object-cover"/>
+            <div class="p-4">
+              <div class="text-lg font-bold mb-2">AstroFiction</div>
+              <div class="flex items-center gap-2 mb-2">
+                <img
+                  src="./img/Avatar (1).png"
+                  class="w-7 h-7 rounded-full border-2 border-[#A259FF]"/>
+                <span class="text-gray-300">Spaceone</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Big Banner -->
+      <section class="mt-16">
+        <div class="overflow-hidden rounded-2xl">
+          <img
+            src="./img/NFT Highlight.png"
+            alt="banner"
+            class="w-full object-cover h-48 md:h-72"/>
+        </div>
+      </section>
+
+      <!-- How it Works start -->
+      <section class="mt-16">
+        <h2 class="text-2xl font-bold mb-6">How it Works</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="bg-[#343444] rounded-2xl p-8 flex flex-col items-center text-center">
+            <img
+              src="./img/Icon (2).png"
+              class="w-16 h-16 mb-4"/>
+            <h3 class="text-lg font-bold mb-2">Set Up Your Wallet</h3>
+            <p class="text-gray-400">
+              Connect your wallet to start buying and selling NFTs securely.
+            </p>
+          </div>
+          <div
+            class="bg-[#343444] rounded-2xl p-8 flex flex-col items-center text-center">
+            <img
+              src="./img/Icon (3).png"
+              class="w-16 h-16 mb-4"/>
+            <h3 class="text-lg font-bold mb-2">Create Collection</h3>
+            <p class="text-gray-400">
+              Create your NFT collection and upload your works easily.
+            </p>
+          </div>
+          <div
+            class="bg-[#343444] rounded-2xl p-8 flex flex-col items-center text-center">
+            <img
+              src="./img/Icon (4).png"
+              class="w-16 h-16 mb-4"/>
+            <h3 class="text-lg font-bold mb-2">Start Earning</h3>
+            <p class="text-gray-400">
+              Sell your NFTs and earn crypto directly to your wallet.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Weekly Digest -->
+      <section class="mt-16 mb-20">
+        <div
+          class="flex flex-col md:flex-row gap-8 items-center bg-[#343444] rounded-2xl p-8">
+          <img
+            src="./img/Photo.png"
+            alt="newsletter"
+            class="w-40 h-40 object-cover rounded-xl mb-4 md:mb-0"/>
+          <div class="flex-1">
+            <h2 class="text-2xl font-bold mb-2">Join Our Weekly Digest</h2>
+            <p class="text-gray-300 mb-4">
+              Get exclusive promotions & updates straight to your inbox.
+            </p>
+            <form class="flex flex-col sm:flex-row gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="px-4 py-2 rounded-xl bg-[#242424] text-white border border-gray-600 focus:outline-none focus:border-[#A259FF] flex-1"/>
+              <button
+                type="submit"
+                class="px-6 py-2 rounded-xl bg-[#A259FF] text-white font-semibold hover:bg-violet-600 transition">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer start -->
+    <footer class="bg-[#343444] py-8">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-2">
+          <svg
+            width="28"
+            height="28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect width="28" height="28" rx="6" fill="#A259FF" />
+            <path
+              d="M6 18h16M8 14h12M10 10h8"
+              stroke="#fff"
+              stroke-width="2"
+              stroke-linecap="round"/>
+          </svg>
+          <span class="ml-2 font-bold text-lg tracking-wide"
+            >NFT Marketplace</span>
+        </div>
+        <div class="text-gray-400">&copy; 2025 All rights reserved.</div>
+      </div>
+    </footer>
+  </body>
 </html>
